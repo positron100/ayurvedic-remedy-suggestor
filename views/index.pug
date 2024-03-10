@@ -1,0 +1,49 @@
+doctype html 
+html 
+    head 
+  
+        style 
+            include ../static/index/style2.css 
+    body 
+        nav#navbar.menu 
+            ul 
+                div.logo 
+                    img(src="/static/rogimage.png", alt="Error")
+                li #[a(href="/") Home ]
+                li #[a(href="/") About us ]
+                li #[a(href="/") Contact us ]
+                li #[a(href="/") Search ]
+
+        section#intro
+
+        section#topic     
+            h2 mission
+            
+        section.mission 
+            div.card#card1
+                h2 SWIFT
+                img(src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/23-swift-512.png", alt="swift")
+            div.card#card2
+                h2 PERL
+                //- img(src="https://cdn.worldvectorlogo.com/logos/perl-programming-language.svg", alt="perl")      
+            div.card#card3
+                h2 PYTHON
+                img(src="https://www.svgrepo.com/show/376344/python.svg", alt="Python")
+        section#sponsor
+            h2 SPONSORS 
+            
+            div.sponsorname
+            
+                ion-icon(name='logo-google' class='icon' id='icon1')
+                ion-icon(name='logo-google-playstore' class='icon' id='icon2')
+                ion-icon(name='logo-facebook' class='icon' id='icon3')
+                ion-icon(name='logo-microsoft' class='icon' id='icon4')
+                ion-icon(name='logo-twitter' class='icon' id='icon5')
+                
+        footer#footer 
+            | Copyright © 2023 WebsiteTutorial.com | All Rights Reserved    
+        script 
+            include ../static/index/index.js
+        script(type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js')
+        script(nomodule='' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js')
+               

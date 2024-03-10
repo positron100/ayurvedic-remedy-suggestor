@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@600&family=Noto+Sans+JP:wght@200&family=Orbitron&family=Poppins:ital,wght@0,200;1,500&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* removes unneccesary space from website */
+
+
+#navbar li a {
+    text-decoration: none;
+    color:rgb(151 148 14);
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: larger;
+}
+
+#navbar {
+    opacity:0.8;
+    background-color: rgb(16 41 16);
+    padding: 13px 4px;
+    font-family: poppins, sans-serif;
+    position:sticky;
+    top:0px;
+    left:0px;
+    z-index:3;
+}
+
+#navbar li {
+    padding: 5px 10px;
+    margin: 0px 30px;
+    font-weight: bold;
+   
+    transition:all ease 0.3s;
+}
+#navbar li:hover{
+    transform:scale(1.2)  translate(10px);
+}
+
+#intro {
+    height: 300px;
+    background-image: url('https://marketplace.canva.com/EAE3YFbqJdQ/1/0/1600w/canva-margarita-perez-_Yuil9nvdRQ.jpg');
+}
+
+#sponsor {
+    height: 300px;
+}
+
+
+.mission {
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0px;
+    z-index:0;
+    
+}
+
+#topic {
+    display: block;
+    width: 100px;
+    /* font-family: 'Black Ops One', cursive !important; */
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 20px auto;
+    font-size:xx-large;
+}
+
+.card {
+    display: inline-block;
+    height: 230px;
+    width: 350px;
+}
+
+#navbar ul .logo img{
+    height:50px;
+    width:50px;
+    mix-blend-mode: color-dodge;
+    filter: invert(1);
+    margin:-6px 150px -15px -230px;
+    transform:scale(1.17);
+}
+/* CARDS DESIGN */
+#card1{
+    background-color:#481111;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card2{
+    background-color:#eab85a;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#card3{
+    background-color:#0F5C70;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card3 img{
+    height:250px;
+    width:250px;
+    position:absolute;
+    opacity:0;
+    transition:all ease 0.3s;
+}
+/* #card2 img{
+    height:180px;
+    width:180px;
+    position:absolute;
+    opacity:0;
+    transition:all ease 0.3s;
+} */
+
+#card1 img{
+    height:190px;
+    width:190px;
+    position:absolute;
+    opacity:0;
+    transition:all ease 0.3s;
+}
+#card1 img:hover,
+/* #card2 img:hover, */
+#card3 img:hover
+{
+    opacity:1;
+}
+.card h2{
+    font-size: xx-large;
+    color:white;
+    font-family: 'Orbitron', sans-serif;
+    opacity:1;
+    }
+
+@keyframes dance{
+    from{
+        content:url(https://svgsilh.com/svg/304847.svg);
+        opacity:0.5;
+    }
+    to{
+        content:url(https://svgsilh.com/svg/3145318.svg);
+        opacity:1; 
+    }
+    
+}
+#card2:hover{
+    animation-name:dance;
+    animation-duration:0.6s;
+    animation-iteration-count:infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in;
+    animation-direction: alternate;
+    background-color:#eab85a;
+    opacity:1;
+}
+
+
+/* SPONSOR SECTION */
+#sponsor h2{
+    display:block;
+    width: 135px;
+    /* font-family:cursive; */
+    /* font-family: 'Black Ops One', cursive !important; */
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 20px auto;
+    font-size:xx-large;
+    font-weight: bold;
+    margin-top: 100px;
+    height: 40px;
+}
+
+.sponsorname{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+}
+.sponsorname .icon{
+    transform:scale(4);
+    transition:all ease 0.5s;
+}
+
+#icon1,
+#icon2,
+#icon3,
+#icon4,
+#icon5{
+    transition:all ease 0.5s;
+}
+
+#icon1:hover,
+#icon2:hover,
+#icon3:hover,
+#icon4:hover,
+#icon5:hover{
+    transform:scale(6) translate(5px);
+}
+#footer{
+    display:block;
+    width:600px;
+    margin:auto;
+    font-family:poppins,sans-serif;
+    font-size: larger;
+    word-spacing: 3px;
+    margin-bottom: 10px;
+
+}
+
+#medicine{
+    display:flex;
+    justify-content:center;
+    width:700px;
+    margin-top:150px;
+    margin-bottom:150px;
+
+}
+

@@ -1,0 +1,309 @@
+/* SCROLLBAR CUSTIMIZATION */
+
+/* REMOVING THE SCROLLBAR */
+::-webkit-scrollbar{
+    /* display: none; */
+    width:10px;
+    /* overflow:hidden; */
+    /* would also remove the functionality of the scrollbar */
+}
+::-webkit-scrollbar-track{
+    background: rgb(79, 117, 95);
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(188, 214, 22);
+}
+/* ::-webkit-scrollbar-thumb:hover{
+    background:rgb(27, 28, 28);
+} */
+
+/* MENU */
+.navbar {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.navbar .menu {
+    /* must use top and left to use sticky */
+    display: flex;
+    height: 60px;
+    width: 100%;
+
+    align-items: center;
+    /* font-family: 'Black Ops One', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.box {
+    padding: 25px;
+    font-size: large;
+    color: white;
+}
+
+/* LOGO */
+#box1 img {
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    mix-blend-mode: hard-light;
+    filter: invert(100%);
+
+}
+
+/* Setting icon */
+#gear {
+    height: 33px;
+    width: 33px;
+    padding: 0px;
+    margin-top: 3px;
+}
+
+/* menu orientation */
+#box1 {
+    margin-left: 10px;
+}
+
+#box4 {
+    margin-right: 430px;
+}
+
+/* menu effects */
+#box2,
+#box3,
+#box4,
+#box5,
+#box6,
+#box7 {
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+#box2:hover,
+#box3:hover,
+#box4:hover,
+#box5:hover,
+#box6:hover,
+#box7:hover {
+    transform: scale(1.2) translate(10px);
+}
+
+#gear {
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+#gear:hover {
+    transform: rotate(90deg);
+}
+
+/* home section */
+#home {
+    margin-top: 100px;
+    margin-right: 0px;
+    display: flex;
+    float: right;
+    flex-direction: column;
+}
+
+#home::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    z-index: -1;
+    background: url(https://www.etq-amsterdam.com/cdn/shop/files/DETQ-WardrobeEssentials-7Aug-2470_crob_v1_ddbc34b0-9869-4c78-a96c-fb1b258d00f0_1080x.png?v=1692983557);
+    height: 619px;
+    width: 983.750px;
+
+
+}
+
+/* home content */
+#home #p1 {
+    margin-right: 8%;
+    margin-bottom: 10px;
+    font-style: oblique;
+    font-family: 'Poppins', sans-serif;
+}
+
+#home #p2 {
+    margin-right: 8%;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#home #p3 {
+    margin-right: 8%;
+    margin-bottom: 20px;
+    /* font-family: 'Black Ops One', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#home #p4 {
+    margin-right: 8%;
+    margin-bottom: 20px;
+    /* font-family: 'Black Ops One', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    transition: all ease 0.3s;
+    border: 1px solid black;
+    padding: 5px 20px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#p4:hover {
+    transform: scale(1.2);
+    background-color: black;
+    color: white;
+
+}
+
+
+/* IMAGE SECTION */
+
+#image_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 640px;
+    width: 95%;
+    margin-left: 39px;
+}
+
+.templates {
+    display: flex;
+    background-color: white;
+    height: 256px;
+    width: 100%;
+    font-family: cursive;
+    font-size: large;
+
+}
+
+.templates img {
+    height: 256px;
+    width: 185px;
+}
+
+#image1 .content,
+#image2 .content,
+#image3 .content {
+    position: relative;
+    top: 54px;
+    left: 15px;
+    color: rgb(99, 99, 99);
+    margin-bottom: 54px;
+}
+
+.content .hypertag{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    color:blueviolet;
+}
+
+.content .hypertag:hover {
+    color: rgb(6, 177, 69);
+}
+
+/* SECTION 2 */
+.section2 {
+
+    position: relative;
+    top: 54px;
+    left: 0px;
+    font-family: poppins, sans-serif;
+}
+
+.section2 h1 {
+   
+    margin-left: 40px;
+    margin-bottom:45px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    overflow-x: hidden;
+}
+
+.pic img {
+    height: 462px;
+    width: 407px;
+    cursor: pointer;
+    transition: all ease-in-out 2s;
+    box-sizing: border-box;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+}
+
+/* IMAGE CHANGING HOVERING EFFECT */
+#pic1{
+    position:relative;
+    overflow:hidden;
+}
+
+#pic1 img.top{
+    position:absolute;
+    left: -224px;
+    opacity: 0;
+    clip: rect(0px,648px,462px,239px);
+    transition:opacity 0.4s;
+}
+#pic1:hover img.top{
+    opacity:1;
+}
+
+
+#pic2{
+    position:relative;
+    overflow:hidden;
+}
+
+#pic2 img.top{
+    position:absolute;
+    left: 17px;
+    opacity: 0;
+    clip: rect(0px,416px,462px,0px);
+    transition:opacity 0.4s;
+}
+#pic2:hover img.top{
+    opacity:1;
+}
+
+
+#pic3{
+    position:relative;
+    overflow:hidden;
+}
+
+#pic3 img.top{
+    position: absolute;
+    left: -95px;
+    opacity: 0;
+    clip: rect(0px,518px,462px,111px);
+    transition:opacity 0.4s;
+}
+#pic3:hover img.top{
+    opacity:1;
+}

@@ -1,0 +1,67 @@
+h2{
+    display:block;
+    width:150px;
+    margin:auto;
+    font-family: poppins , sans-serif;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+
+.myform{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.myform input{
+    all:unset;
+    border:1px solid black;
+    width: 350px;
+    height: 35px;
+    font-size: larger;
+    padding:10px 20px;
+    margin:10px;
+    font-family:poppins,sans-serif;
+}
+.myform .fields{
+    transition:all ease 0.3s;
+}
+.myform .fields:hover{
+    transform:scale(1.2);
+    border:1px solid black;
+    
+}
+#footer{
+    margin-top:30px;
+}
+.function .switch{
+    width: 145px;
+    background-color: white;
+    border:1px solid rgba(0, 0, 0, 0.669);
+    color:#757582;
+    opacity:0.99;
+    transition:all ease 0.3s;
+} 
+
+.function .switch:hover{
+    transform:scale(1.16);
+    cursor:pointer;
+    background-color: rgb(16 41 16);
+    border-color:transparent;
+    color: rgb(151 148 14);
+}
+.function{
+    display: flex;
+    width: 411px;
+}
+.function input{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.myform input[name='DOB']{
+    padding-top:13px;
+}

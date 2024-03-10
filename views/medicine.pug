@@ -1,0 +1,17 @@
+extend base.pug
+
+block scripts  
+    script 
+        include ../static/index/index.js
+    script(type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js')
+    script(nomodule='' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js')
+        
+
+block style 
+    style 
+        include ../static/index/style2.css
+        include ../static/index/stylecontact.css 
+
+block content 
+    h2#medicine 
+        | #{content}        

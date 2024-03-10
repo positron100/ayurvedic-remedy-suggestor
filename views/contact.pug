@@ -1,0 +1,25 @@
+extend base.pug
+
+block scripts 
+    script  
+        include ../static/index/index.js
+    script(type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js')
+    script(nomodule='' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js')
+        
+
+block style 
+    style 
+        include ../static/index/style2.css
+        include ../static/index/stylecontact.css
+block content 
+    h2 Contact Us
+    form(action="/contact", method="post",class="myform")
+        input(type="text",name="Name",placeholder="Name",class='fields')
+        input(type="email",name="Email",placeholder="Email",class='fields')
+        input(type="text",name="Contact",placeholder="Contact",class='fields')
+        input(type="date",name="DOB",class='fields')
+        div.function
+            input(type="submit",value="Submit", class="switch")
+            input(type="reset",value="Reset",class="switch")
+        
+

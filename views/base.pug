@@ -1,0 +1,23 @@
+doctype html 
+html 
+    head 
+        title WebsiteTutorial 
+        block scripts 
+        block style  
+    body 
+        nav#navbar.menu 
+            ul 
+                div.logo 
+                    img(src="/static/rogimage.png", alt="Error")
+                li #[a(href="/") Home ]
+                li #[a(href="/") About us ]
+                li #[a(href="/contact") Contact us ]
+                li #[a(href="/details") Search ]
+ 
+        block content
+            
+        footer#footer 
+            | Copyright © 2023 WebsiteTutorial.com | All Rights Reserved  
+            
+
+//- base.pug : This file is basically serving as a template which would be used by contact.pug / home.pug            
