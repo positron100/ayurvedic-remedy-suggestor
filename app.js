@@ -3,8 +3,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyparser = require("body-parser");
-const hostname = "localhost";
-const port = 3000;
+const hostname = "0.0.0.0";
+const port = process.env.PORT || 3000;
 require('dotenv').config({ path: './.env.local' });
 // Add this line at the top to load environment variables
 // using mongoose module
