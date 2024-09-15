@@ -2,6 +2,10 @@
 
 This is a MERN stack-based web application designed to provide Ayurvedic remedy suggestions based on user-input data like disease, gender, age, and severity. The app allows users to input their details and fetches relevant Ayurvedic medicines from the database.
 
+# recommendation 
+it is my recommendation to fill the data fields in search form in search webpage in the same manner as provided in the .csv file , otherwise it  will not generate productive results.
+
+
 ## Table of Contents
 
 - [Features](#features)
@@ -42,7 +46,7 @@ This is a MERN stack-based web application designed to provide Ayurvedic remedy 
     npm run dev
     ```
 
-    The application will run at [http://localhost:3000](http://localhost:3000).
+    The application will run at remote server in cloud mongodb atlas due to ehich can acssess the application at anytime.
 
 4. **MongoDB setup**:
 
@@ -50,7 +54,7 @@ This is a MERN stack-based web application designed to provide Ayurvedic remedy 
 
 ## Usage
 
-1. Navigate to the homepage at [http://localhost:3000](http://localhost:3000) to explore the Ayurvedic products.
+1. Navigate to the homepage at to explore the Ayurvedic products.
 2. Go to the **Search** section to input details like disease, gender, severity, and age to find Ayurvedic remedies.
 3. Use the **Contact** section to send a message or query to the admin.
 4. The remedies for the search inputs will be displayed based on the database entries.
