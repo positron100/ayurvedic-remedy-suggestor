@@ -5,7 +5,7 @@
  * JSON string value inside the user message, and the system prompt states that
  * this value is untrusted data to be analysed, not instructions.
  */
-import type { AllowedSymptom, PhrasePayload } from "./types.ts";
+import type { AllowedSymptom, PhrasePayload } from "./types";
 
 export const INTENT_SYSTEM = `You extract structured symptom information from a description written by a member of the public.
 

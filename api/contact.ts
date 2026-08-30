@@ -6,7 +6,7 @@
  * All work is in `_contact.ts`, which has no host dependencies. The Resend API
  * key lives only in this function's environment and never reaches the browser.
  */
-import { handleContact, type ContactEnv, type ContactPayload } from "./_contact.ts";
+import { handleContact, type ContactEnv, type ContactPayload } from "./_contact";
 
 export const config = { runtime: "edge" };
 

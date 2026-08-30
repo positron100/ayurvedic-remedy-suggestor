@@ -1,6 +1,6 @@
-import type { LLMProvider, LLMEnv } from "../types.ts";
-import { createAnthropicProvider } from "./anthropic.ts";
-import { createNvidiaProvider } from "./nvidia.ts";
+import type { LLMProvider, LLMEnv } from "../types";
+import { createAnthropicProvider } from "./anthropic";
+import { createNvidiaProvider } from "./nvidia";
 
 /**
  * Resolves the configured provider, or `null` when the LLM layer is not set up.

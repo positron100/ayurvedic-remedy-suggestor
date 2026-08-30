@@ -6,8 +6,8 @@
  * All work is in `_recommend.ts`, which has no host dependencies. The LLM API
  * key lives only in this function's environment and never reaches the browser.
  */
-import { handleRecommend, handleCapabilities } from "./_recommend.ts";
-import type { LLMEnv } from "./_llm/types.ts";
+import { handleRecommend, handleCapabilities } from "./_recommend";
+import type { LLMEnv } from "./_llm/types";
 
 export const config = { runtime: "edge" };
 

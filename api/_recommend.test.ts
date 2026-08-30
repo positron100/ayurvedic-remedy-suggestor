@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { handleRecommend, handleCapabilities } from "./_recommend.ts";
-import type { LLMEnv } from "./_llm/types.ts";
+import { handleRecommend, handleCapabilities } from "./_recommend";
+import type { LLMEnv } from "./_llm/types";
 
 const LLM_ENV: LLMEnv = { LLM_PROVIDER: "anthropic", LLM_API_KEY: "test-key", LLM_MODEL: "claude-haiku-4-5" };
 const NO_ENV: LLMEnv = {};

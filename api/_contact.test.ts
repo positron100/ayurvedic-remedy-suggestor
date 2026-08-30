@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { handleContact, buildEmail, type ContactEnv } from "./_contact.ts";
+import { handleContact, buildEmail, type ContactEnv } from "./_contact";
 
 const env: ContactEnv = {
   RESEND_API_KEY: "test-key",

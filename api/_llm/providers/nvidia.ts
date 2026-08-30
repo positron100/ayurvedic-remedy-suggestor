@@ -9,9 +9,9 @@
  * fallback behaviour are all identical regardless of which provider answers.
  * Nothing here leaks past `getProvider()`.
  */
-import { ProviderError, type LLMProvider, type LLMEnv } from "../types.ts";
-import { INTENT_SYSTEM, PHRASE_SYSTEM, buildIntentUser, buildPhraseUser } from "../prompts.ts";
-import { extractJsonObject, validateIntent, validatePhrasing } from "../validate.ts";
+import { ProviderError, type LLMProvider, type LLMEnv } from "../types";
+import { INTENT_SYSTEM, PHRASE_SYSTEM, buildIntentUser, buildPhraseUser } from "../prompts";
+import { extractJsonObject, validateIntent, validatePhrasing } from "../validate";
 
 const API_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
 const DEFAULT_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b";

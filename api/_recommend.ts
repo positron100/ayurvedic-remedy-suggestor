@@ -13,14 +13,14 @@
  * HTTP 200. Provider errors and secrets are logged for the operator and never
  * put on the wire.
  */
-import { getProvider } from "./_llm/providers/index.ts";
-import type { LLMEnv } from "./_llm/types.ts";
+import { getProvider } from "./_llm/providers/index";
+import type { LLMEnv } from "./_llm/types";
 import type {
   CapabilitiesResponse,
   ParseIntentResponse,
   PhraseResponse,
   RecommendRequest,
-} from "./_llm/dto.ts";
+} from "./_llm/dto";
 
 export interface HandlerResult {
   status: number;

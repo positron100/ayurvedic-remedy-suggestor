@@ -6,7 +6,7 @@
  * bounded, schema-correct value or throw — in which case the caller falls back
  * to the deterministic templates.
  */
-import { ProviderError, type IntentHints, type PhrasedNarrative, type PhrasePayload, type AllowedSymptom } from "./types.ts";
+import { ProviderError, type IntentHints, type PhrasedNarrative, type PhrasePayload, type AllowedSymptom } from "./types";
 
 const MAX_INTENT_SYMPTOMS = 8;
 const PHRASE_FIELD_MAX = 700;

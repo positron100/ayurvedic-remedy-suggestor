@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { getProvider } from "./index.ts";
-import type { LLMEnv } from "../types.ts";
+import { getProvider } from "./index";
+import type { LLMEnv } from "../types";
 
 describe("getProvider — selection", () => {
   it("returns null when LLM_PROVIDER is unset", () => {

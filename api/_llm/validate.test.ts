@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { validateIntent, validatePhrasing, extractJsonObject } from "./validate.ts";
-import { ProviderError, type PhrasePayload, type AllowedSymptom } from "./types.ts";
+import { validateIntent, validatePhrasing, extractJsonObject } from "./validate";
+import { ProviderError, type PhrasePayload, type AllowedSymptom } from "./types";
 
 const ALLOWED: AllowedSymptom[] = [
   { id: "burning-stomach", label: "Burning stomach", synonyms: [] },

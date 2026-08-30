@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { createNvidiaProvider } from "./nvidia.ts";
-import { ProviderError, type AllowedSymptom, type LLMEnv, type PhrasePayload } from "../types.ts";
+import { createNvidiaProvider } from "./nvidia";
+import { ProviderError, type AllowedSymptom, type LLMEnv, type PhrasePayload } from "../types";
 
 const ENV: LLMEnv = { LLM_PROVIDER: "nvidia", LLM_API_KEY: "test-key" };
 

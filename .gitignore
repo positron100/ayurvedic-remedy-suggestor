@@ -5,10 +5,12 @@ node_modules
 dist
 src/generated
 
-# Env — never commit real values
+# Env — never commit real values (.env.example is the only tracked one)
 .env
 .env.local
 .env.*.local
+.env.development.local
+.env.production.local
 
 # Logs
 *.log
@@ -20,3 +22,6 @@ Thumbs.db
 .idea
 .vscode
 .playwright-mcp
+
+# Vercel
+.vercel

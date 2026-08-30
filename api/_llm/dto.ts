@@ -7,7 +7,7 @@
  * never a provider error string. The client treats anything other than a
  * well-formed success as "no enhancement" and uses the deterministic result.
  */
-import type { IntentHints, PhrasePayload, PhrasedNarrative } from "./types.ts";
+import type { IntentHints, PhrasePayload, PhrasedNarrative } from "./types";
 
 export type { IntentHints, PhrasePayload, PhrasedNarrative };
 

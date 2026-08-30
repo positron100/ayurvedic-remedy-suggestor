@@ -5,9 +5,9 @@
  * runtimes, and a different provider is a sibling file with its own fetch and
  * the same `LLMProvider` surface. Nothing here leaks past `getProvider()`.
  */
-import { ProviderError, type LLMProvider, type LLMEnv } from "../types.ts";
-import { INTENT_SYSTEM, PHRASE_SYSTEM, buildIntentUser, buildPhraseUser } from "../prompts.ts";
-import { extractJsonObject, validateIntent, validatePhrasing } from "../validate.ts";
+import { ProviderError, type LLMProvider, type LLMEnv } from "../types";
+import { INTENT_SYSTEM, PHRASE_SYSTEM, buildIntentUser, buildPhraseUser } from "../prompts";
+import { extractJsonObject, validateIntent, validatePhrasing } from "../validate";
 
 const API_URL = "https://api.anthropic.com/v1/messages";
 // The stable Messages API version string (a fixed identifier, not "today").
