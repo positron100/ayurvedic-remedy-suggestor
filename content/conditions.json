@@ -1,0 +1,211 @@
+{
+  "_note": "The four conditions in scope. `summary` and `severityGuidance` are neutral editorial text. `symptoms` weights are editorial. `remedies` links (which remedy, which severity band) are INHERITED FROM THE LEGACY DATASET and are not clinically validated — see each link's provenance. `whenToSeeProfessional` / `generalPrecautions` are sourced from the cited NHS pages.",
+  "conditions": [
+    {
+      "id": "gastritis",
+      "name": "Gastritis",
+      "aliases": ["acid stomach", "stomach inflammation", "gastric", "acidity"],
+      "summary": "Irritation or inflammation of the stomach lining, often felt as burning or gnawing discomfort in the upper abdomen, indigestion, nausea, or feeling full quickly. It can be short-lived or ongoing.",
+      "ayurvedicView": null,
+      "symptoms": [
+        { "symptomId": "upper-abdominal-burning", "weight": 3, "hallmark": true },
+        { "symptomId": "worse-after-eating", "weight": 2 },
+        { "symptomId": "indigestion", "weight": 2 },
+        { "symptomId": "nausea", "weight": 2 },
+        { "symptomId": "regurgitation", "weight": 2 },
+        { "symptomId": "loss-of-appetite", "weight": 1 },
+        { "symptomId": "vomiting", "weight": 1 }
+      ],
+      "severityGuidance": {
+        "mild": "Occasional discomfort that settles on its own and does not stop you eating or sleeping.",
+        "moderate": "Frequent or daily discomfort that affects appetite, meals, or sleep.",
+        "severe": "Constant or intense pain, repeated vomiting, or any sign of bleeding — this needs medical assessment, not a home remedy."
+      },
+      "sensitiveDemographics": ["pregnancy", "breastfeeding", "child", "older-adult"],
+      "remedies": [
+        { "remedyId": "hingvastaka-churna", "severity": ["severe"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset", "note": "Paired with higher-severity gastritis in the legacy data." },
+        { "remedyId": "panchakola-churna", "severity": ["moderate", "severe"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "trikatu-churna", "severity": ["mild", "severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shankha-vati", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "gandharvahastadi-kashaya", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "indukantham-kashayam", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ashta-churnam", "severity": ["mild", "moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "citrakadi-vati", "severity": ["moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "gulguluchyadi-kashayam", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "lavanabhaskara-churna", "severity": ["mild", "moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shivakshara-pachana-churna", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "hingvadi-vati", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ajamodarka", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" }
+      ],
+      "redFlags": ["rf-gi-bleed", "rf-sudden-severe-abdo-pain", "rf-unexplained-weight-loss"],
+      "generalPrecautions": [
+        { "value": "Persistent indigestion (lasting three weeks or more) should be reviewed by a doctor rather than managed only at home.", "provenance": "sourced", "sources": ["nhs-gastritis"] }
+      ],
+      "whenToSeeProfessional": [
+        { "value": "See a doctor if indigestion keeps coming back, does not improve, is painful, or starts alongside weight loss, vomiting, difficulty swallowing, or feeling full very quickly.", "provenance": "sourced", "sources": ["nhs-gastritis"] },
+        { "value": "Get emergency help for vomit that is bright red or looks like ground coffee, stools that are black and tarry, or severe pain that started suddenly.", "provenance": "sourced", "sources": ["nhs-gastritis"] }
+      ],
+      "sources": ["nhs-gastritis"],
+      "verification": {
+        "level": "needs_review",
+        "summary": "Symptom associations and severity descriptions are editorial. Professional-care guidance is sourced from NHS. Remedy links are inherited from the legacy dataset and not clinically validated."
+      }
+    },
+    {
+      "id": "diarrhea",
+      "name": "Diarrhea",
+      "aliases": ["diarrhoea", "loose motions", "loose stools", "the runs", "upset stomach", "stomach bug"],
+      "summary": "Passing loose or watery stools more often than usual, sometimes with cramps, urgency, or nausea. Most short episodes settle within a few days; the main risk is losing too much fluid.",
+      "ayurvedicView": null,
+      "symptoms": [
+        { "symptomId": "loose-stools", "weight": 3, "hallmark": true },
+        { "symptomId": "abdominal-cramps", "weight": 2 },
+        { "symptomId": "urgency-to-toilet", "weight": 2 },
+        { "symptomId": "nausea", "weight": 1 },
+        { "symptomId": "vomiting", "weight": 1 },
+        { "symptomId": "dehydration-thirst", "weight": 2 },
+        { "symptomId": "fatigue", "weight": 1 }
+      ],
+      "severityGuidance": {
+        "mild": "A few loose stools, still able to eat and drink normally, no marked thirst.",
+        "moderate": "Frequent loose stools with cramps, needing effort to keep fluids up.",
+        "severe": "Unable to keep fluids down, very little urine, blood in the stool, or lasting more than a week — seek medical care."
+      },
+      "sensitiveDemographics": ["pregnancy", "breastfeeding", "child", "older-adult"],
+      "remedies": [
+        { "remedyId": "kutajarishta", "severity": ["moderate"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset", "note": "The most frequently paired remedy for moderate diarrhea in the legacy data." },
+        { "remedyId": "kutaja", "severity": ["mild"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "bilva", "severity": ["moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "dadimashtaka-churna", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "haritaki", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset", "note": "Legacy pairing; haritaki is more usually described as a bowel regulator, so this association warrants review." },
+        { "remedyId": "sitopaladi-churna", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset", "note": "Sitopaladi churna is classically a respiratory formulation; this diarrhea pairing looks like a legacy-data artefact and needs review." },
+        { "remedyId": "pomegranate-drink", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "lime-juice", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "fenugreek", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ajamodarka", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "sanjivani-vati", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "tribhuvankirti-rasa", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "mrityunjaya-rasa", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" }
+      ],
+      "redFlags": ["rf-bloody-diarrhoea", "rf-dehydration", "rf-persistent-diarrhoea", "rf-sudden-severe-abdo-pain", "rf-very-high-fever"],
+      "generalPrecautions": [
+        { "value": "The priority in any diarrhoea is fluids. Small, frequent sips of water or an oral rehydration solution matter more than any specific remedy.", "provenance": "sourced", "sources": ["nhs-diarrhoea"] }
+      ],
+      "whenToSeeProfessional": [
+        { "value": "Contact a doctor if there is blood in the stool, if diarrhoea lasts more than 7 days or vomiting more than 2 days, or if you cannot keep fluids down or are passing very little urine.", "provenance": "sourced", "sources": ["nhs-diarrhoea"] },
+        { "value": "Get emergency help for a stiff neck with sensitivity to light, a sudden severe headache or tummy ache, or pale, blotchy or blue-tinged skin.", "provenance": "sourced", "sources": ["nhs-diarrhoea"] }
+      ],
+      "sources": ["nhs-diarrhoea"],
+      "verification": {
+        "level": "needs_review",
+        "summary": "Symptom associations and severity descriptions are editorial. Rehydration and professional-care guidance is sourced from NHS. Remedy links are inherited from the legacy dataset; several look like data artefacts and are flagged for review."
+      }
+    },
+    {
+      "id": "migraine",
+      "name": "Migraine",
+      "aliases": ["migraines", "migraine headache", "sick headache"],
+      "summary": "A headache disorder, usually felt as a moderate-to-severe throbbing pain often on one side of the head, frequently with nausea and sensitivity to light or sound, and sometimes preceded by visual disturbance (aura).",
+      "ayurvedicView": null,
+      "symptoms": [
+        { "symptomId": "throbbing-headache", "weight": 3, "hallmark": true },
+        { "symptomId": "one-sided-head-pain", "weight": 2 },
+        { "symptomId": "light-sensitivity", "weight": 2 },
+        { "symptomId": "sound-sensitivity", "weight": 2 },
+        { "symptomId": "headache-with-nausea", "weight": 2 },
+        { "symptomId": "visual-aura", "weight": 2 },
+        { "symptomId": "nausea", "weight": 1 }
+      ],
+      "severityGuidance": {
+        "mild": "A headache you can work through, easing with rest or the usual over-the-counter painkiller.",
+        "moderate": "A headache that disrupts your day and makes normal activity difficult.",
+        "severe": "A headache that is disabling, unusually intense, unusually long, or different from your normal pattern — this warrants medical review."
+      },
+      "sensitiveDemographics": ["pregnancy", "breastfeeding", "child", "older-adult"],
+      "remedies": [
+        { "remedyId": "shankhapushpi", "severity": ["severe"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "jatamansi-shankhapushpi", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "anu-taila-shankhapushpi", "severity": ["moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "chandraprabha-vati", "severity": ["moderate"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ashwagandha", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ginger", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset", "note": "Ginger has some sourced evidence for migraine-associated nausea (see remedy record)." },
+        { "remedyId": "jyotishmati", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "drakshasava", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "pathyadi-guggulu", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shankha-bhasma", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shankha-vati", "severity": ["mild", "severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "vasant-kusumakar-ras", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "mukta-pishti", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "mudgaparni", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "trikatu-churna", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "fenugreek", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shankha-prakshalana", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset", "note": "Shankha prakshalana is an intensive cleansing procedure, not a remedy to self-administer; retained for traceability only." }
+      ],
+      "redFlags": ["rf-sudden-severe-headache", "rf-neuro-deficit", "rf-meningitis", "rf-head-injury", "rf-seizure-confusion", "rf-pregnancy-headache"],
+      "generalPrecautions": [
+        { "value": "A headache that is new, suddenly different from your usual pattern, or steadily worsening over days to weeks should be assessed rather than self-treated.", "provenance": "sourced", "sources": ["nhs-migraine"] }
+      ],
+      "whenToSeeProfessional": [
+        { "value": "See a doctor urgently if a migraine lasts longer than 72 hours, if aura symptoms last more than an hour, or if you are pregnant or recently gave birth.", "provenance": "sourced", "sources": ["nhs-migraine"] },
+        { "value": "Call emergency services for a sudden extremely painful headache, problems speaking or remembering, vision loss, drowsiness or confusion, a seizure, weakness on one side of the body or face, or a headache after a recent head injury.", "provenance": "sourced", "sources": ["nhs-migraine"] }
+      ],
+      "sources": ["nhs-migraine"],
+      "verification": {
+        "level": "needs_review",
+        "summary": "Symptom associations and severity descriptions are editorial. Emergency and professional-care guidance is sourced from NHS. Remedy links are inherited from the legacy dataset and not clinically validated."
+      }
+    },
+    {
+      "id": "arthritis",
+      "name": "Arthritis",
+      "aliases": ["joint pain", "arthritic pain", "joint inflammation", "aching joints"],
+      "summary": "An umbrella term for joint pain, stiffness, and sometimes swelling or reduced movement. Many different conditions cause it, and management depends on which one.",
+      "ayurvedicView": null,
+      "symptoms": [
+        { "symptomId": "joint-pain", "weight": 3, "hallmark": true },
+        { "symptomId": "joint-stiffness", "weight": 2 },
+        { "symptomId": "joint-swelling", "weight": 2 },
+        { "symptomId": "reduced-joint-movement", "weight": 2 },
+        { "symptomId": "fatigue", "weight": 1 }
+      ],
+      "severityGuidance": {
+        "mild": "Occasional aches or stiffness that do not limit everyday activity.",
+        "moderate": "Daily pain or stiffness that makes some tasks harder.",
+        "severe": "Pain that is constant or disabling, a hot or visibly swollen joint, or pain with fever — this needs medical assessment."
+      },
+      "sensitiveDemographics": ["pregnancy", "breastfeeding", "child", "older-adult"],
+      "remedies": [
+        { "remedyId": "nirgundi-oil", "severity": ["moderate"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "dashmool-oil", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "boswellia-curcumin", "severity": ["severe"], "ageContext": "any", "weight": 3, "provenance": "inherited-legacy-dataset", "note": "Both components (boswellia, turmeric/curcumin) have some sourced evidence for joint symptoms — see remedy record." },
+        { "remedyId": "aamvatantak-churna", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "dashmool-powder", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "nirgundi-leaves-paste", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ginger", "severity": ["mild"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset", "note": "Ginger has some sourced evidence for osteoarthritis symptoms — see remedy record." },
+        { "remedyId": "castor-oil", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "giloy-satva", "severity": ["severe"], "ageContext": "any", "weight": 2, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "kamdudha-ras", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "praval-pishti", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "shuddha-laksha", "severity": ["moderate"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "ajwan-water", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "jahar-mohra-pishti", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "suhanjana-beej", "severity": ["severe"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "akik-pishti", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" },
+        { "remedyId": "mukta-pishti", "severity": ["mild"], "ageContext": "any", "weight": 1, "provenance": "inherited-legacy-dataset" }
+      ],
+      "redFlags": ["rf-hot-swollen-joint", "rf-joint-pain-with-fever", "rf-very-high-fever"],
+      "generalPrecautions": [
+        { "value": "Because many different conditions cause arthritis, a diagnosis matters — the right management for one type can be wrong for another.", "provenance": "sourced", "sources": ["nhs-arthritis"] }
+      ],
+      "whenToSeeProfessional": [
+        { "value": "See a doctor if joint pain, swelling, or stiffness does not settle within a few days, or if painkillers are not helping.", "provenance": "sourced", "sources": ["nhs-arthritis"] },
+        { "value": "Seek urgent care for sudden severe pain and swelling in a single joint, a joint that is hot or red, or joint pain alongside fever, a rash, eye inflammation, or urinary symptoms.", "provenance": "sourced", "sources": ["nhs-arthritis"] }
+      ],
+      "sources": ["nhs-arthritis"],
+      "verification": {
+        "level": "needs_review",
+        "summary": "Symptom associations and severity descriptions are editorial. Professional-care guidance is sourced from NHS. Remedy links are inherited from the legacy dataset and not clinically validated."
+      }
+    }
+  ]
+}

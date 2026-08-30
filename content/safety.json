@@ -1,0 +1,27 @@
+{
+  "_note": "Engine-wide safety policy. Thresholds are tuning values for the deterministic confidence gate; adjust with care and re-run the engine tests.",
+  "safety": {
+    "globalRedFlags": [
+      "rf-sudden-severe-headache",
+      "rf-neuro-deficit",
+      "rf-meningitis",
+      "rf-head-injury",
+      "rf-seizure-confusion",
+      "rf-gi-bleed",
+      "rf-bloody-diarrhoea",
+      "rf-sudden-severe-abdo-pain",
+      "rf-dehydration",
+      "rf-very-high-fever",
+      "rf-unexplained-weight-loss",
+      "rf-pregnancy-headache",
+      "rf-young-child"
+    ],
+    "lowConfidenceThreshold": 0.5,
+    "insufficientInfoThreshold": 0.22,
+    "minSymptomSignals": 2,
+    "disclaimer": {
+      "short": "Guidance only — not medical advice, diagnosis, or treatment.",
+      "full": "Sattva offers general information drawn from traditional Ayurvedic sources and cited health-authority guidance. It is not a medical diagnosis or a treatment plan, and it cannot account for your full health history. Always consult a qualified healthcare professional before starting any remedy, and seek prompt medical care for severe, sudden, or worsening symptoms."
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "sources": [
+    {
+      "id": "nhs-diarrhoea",
+      "title": "Diarrhoea and vomiting",
+      "publisher": "NHS (UK)",
+      "url": "https://www.nhs.uk/conditions/diarrhoea-and-vomiting/",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nhs-gastritis",
+      "title": "Gastritis",
+      "publisher": "NHS (UK)",
+      "url": "https://www.nhs.uk/conditions/gastritis/",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nhs-migraine",
+      "title": "Migraine",
+      "publisher": "NHS (UK)",
+      "url": "https://www.nhs.uk/conditions/migraine/",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nhs-arthritis",
+      "title": "Arthritis",
+      "publisher": "NHS (UK)",
+      "url": "https://www.nhs.uk/conditions/arthritis/",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nccih-ginger",
+      "title": "Ginger",
+      "publisher": "US National Center for Complementary and Integrative Health",
+      "url": "https://www.nccih.nih.gov/health/ginger",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nccih-ashwagandha",
+      "title": "Ashwagandha",
+      "publisher": "US National Center for Complementary and Integrative Health",
+      "url": "https://www.nccih.nih.gov/health/ashwagandha",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nccih-fenugreek",
+      "title": "Fenugreek",
+      "publisher": "US National Center for Complementary and Integrative Health",
+      "url": "https://www.nccih.nih.gov/health/fenugreek",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "nccih-turmeric",
+      "title": "Turmeric",
+      "publisher": "US National Center for Complementary and Integrative Health",
+      "url": "https://www.nccih.nih.gov/health/turmeric",
+      "accessed": "2026-08-30",
+      "kind": "health-authority"
+    },
+    {
+      "id": "legacy-dataset",
+      "title": "Drug prescription Dataset (legacy application data)",
+      "publisher": "Original ayurvedic-remedy-suggestor project",
+      "kind": "other"
+    }
+  ]
+}

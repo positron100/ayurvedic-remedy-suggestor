@@ -1,0 +1,148 @@
+{
+  "_note": "Symptoms/situations that divert the user to professional care instead of a remedy. Trigger phrases are matched against free text; a few triggers are structured demographic flags (pregnancy, child) supplied by the safety filter. 'emergency' and 'urgent' both divert; 'advisory' is surfaced but does not block. Wording of guidance is derived from the cited health-authority pages.",
+  "redFlags": [
+    {
+      "id": "rf-sudden-severe-headache",
+      "label": "a sudden, severe headache",
+      "triggers": ["sudden severe headache", "worst headache of my life", "thunderclap headache", "headache came on suddenly and is extremely painful", "explosive headache", "sudden extremely painful headache"],
+      "guidance": "A headache that comes on suddenly and is extremely painful needs emergency assessment — call your local emergency number now.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-migraine", "nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-neuro-deficit",
+      "label": "weakness, numbness, or speech or vision problems",
+      "triggers": ["weakness on one side", "cant move my arm", "cant move my leg", "face is drooping", "slurred speech", "problems speaking", "cant speak properly", "trouble speaking", "numbness on one side", "lost my vision", "double vision", "blurred vision", "cant see properly", "one side of my face"],
+      "guidance": "Weakness, numbness, difficulty speaking, or sudden vision changes — especially on one side — can be signs of a stroke or another serious problem. Call your local emergency number now.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-migraine"]
+    },
+    {
+      "id": "rf-meningitis",
+      "label": "stiff neck with a high temperature and sensitivity to light",
+      "triggers": ["stiff neck and pain when looking at bright lights", "stiff neck with a fever", "stiff neck and high temperature", "cant put my chin to my chest", "rash that doesnt fade", "non blanching rash"],
+      "guidance": "A stiff neck with a high temperature, a severe headache, and dislike of bright light can indicate meningitis. Seek emergency care immediately.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-head-injury",
+      "label": "a headache after a recent head injury",
+      "triggers": ["hit my head", "after a head injury", "recently had a head injury", "banged my head", "headache after falling"],
+      "guidance": "A new or worsening headache after a recent head injury should be assessed urgently. Contact emergency services or go to an emergency department.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-migraine"]
+    },
+    {
+      "id": "rf-seizure-confusion",
+      "label": "a seizure, drowsiness, or confusion",
+      "triggers": ["had a seizure", "had a fit", "feel drowsy and confused", "very confused", "cant stay awake", "unresponsive", "altered consciousness"],
+      "guidance": "A seizure, unusual drowsiness, or confusion alongside a headache or illness needs emergency assessment. Call your local emergency number now.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-migraine"]
+    },
+    {
+      "id": "rf-gi-bleed",
+      "label": "blood in vomit or black, tarry stools",
+      "triggers": ["vomiting blood", "blood in my vomit", "vomit looks like coffee grounds", "coffee ground vomit", "black sticky poo", "black tarry stools", "black stools", "tar like stool", "melena"],
+      "guidance": "Vomiting blood, or passing black tarry stools, can indicate bleeding in the digestive tract. This is a medical emergency — seek immediate care.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-gastritis"]
+    },
+    {
+      "id": "rf-bloody-diarrhoea",
+      "label": "blood in the stool",
+      "triggers": ["bloody diarrhea", "bloody diarrhoea", "blood in my stool", "blood in my poo", "bleeding from the bottom", "bright red blood when i go"],
+      "guidance": "Blood in the stool should be assessed by a health professional promptly rather than treated at home. Contact a doctor or urgent-care service today.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-sudden-severe-abdo-pain",
+      "label": "sudden, severe abdominal or chest pain",
+      "triggers": ["sudden severe tummy ache", "sudden severe stomach pain", "severe abdominal pain that started suddenly", "severe chest pain that started suddenly", "worst stomach pain", "doubled over in pain"],
+      "guidance": "Severe abdominal or chest pain that starts suddenly needs urgent medical assessment. Seek emergency care.",
+      "urgency": "emergency",
+      "provenance": "sourced",
+      "sources": ["nhs-gastritis", "nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-dehydration",
+      "label": "signs of significant dehydration",
+      "triggers": ["cant keep any fluids down", "cant keep fluids down", "not passing urine", "havent peed all day", "very little urine", "dizzy when i stand", "sunken eyes", "no tears when crying"],
+      "guidance": "Being unable to keep fluids down, or passing very little urine, are signs of significant dehydration and need medical attention — particularly for children and older adults.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-persistent-diarrhoea",
+      "label": "diarrhoea lasting more than 7 days or vomiting more than 2 days",
+      "triggers": ["diarrhea for more than a week", "diarrhoea for over a week", "loose stools for two weeks", "vomiting for days", "been sick for three days"],
+      "guidance": "Diarrhoea lasting more than 7 days, or vomiting lasting more than 2 days, should be reviewed by a doctor.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-diarrhoea"]
+    },
+    {
+      "id": "rf-unexplained-weight-loss",
+      "label": "unintentional weight loss, difficulty swallowing, or a lump",
+      "triggers": ["losing weight without trying", "unexplained weight loss", "lost a lot of weight", "difficult to swallow", "painful to swallow", "food gets stuck", "lump in my tummy", "feel full after a small meal"],
+      "guidance": "Unintentional weight loss, difficulty swallowing, feeling full very quickly, or a lump in the abdomen should be checked by a doctor soon.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-gastritis"]
+    },
+    {
+      "id": "rf-hot-swollen-joint",
+      "label": "a single hot, red, severely painful or swollen joint",
+      "triggers": ["one joint suddenly very painful and swollen", "hot swollen joint", "joint is red and hot", "severe pain and swelling in one joint", "cant put weight on my joint", "joint swelled up overnight"],
+      "guidance": "Severe pain and swelling that starts suddenly in a single joint, or a joint that is hot and red, needs prompt medical assessment (for example to rule out infection or gout).",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-arthritis"]
+    },
+    {
+      "id": "rf-joint-pain-with-fever",
+      "label": "joint pain with a fever or feeling generally unwell",
+      "triggers": ["sore joints and a fever", "joint pain with a temperature", "joints hurt and i feel hot and shivery", "joint pain and feel unwell", "aching joints and a rash"],
+      "guidance": "Joint pain together with a fever, chills, a rash, eye inflammation, or urinary symptoms should be assessed by a doctor promptly.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-arthritis"]
+    },
+    {
+      "id": "rf-very-high-fever",
+      "label": "a very high temperature",
+      "triggers": ["very high fever", "temperature over 39", "burning up with fever", "high temperature that wont come down"],
+      "guidance": "A very high temperature, especially with other symptoms, should be assessed by a health professional.",
+      "urgency": "urgent",
+      "provenance": "sourced",
+      "sources": ["nhs-diarrhoea", "nhs-arthritis"]
+    },
+    {
+      "id": "rf-pregnancy-headache",
+      "label": "a new or severe headache during or shortly after pregnancy",
+      "triggers": ["pregnant", "just had a baby", "recently gave birth", "postpartum"],
+      "guidance": "A new, severe, or changing headache during pregnancy or soon after giving birth should be discussed with a midwife or doctor promptly, and any remedy should be cleared with them first.",
+      "urgency": "advisory",
+      "provenance": "sourced",
+      "sources": ["nhs-migraine"]
+    },
+    {
+      "id": "rf-young-child",
+      "label": "symptoms in a young child",
+      "triggers": ["for my child", "my baby", "my toddler", "my infant", "my son is", "my daughter is", "my kid has", "year old child", "month old"],
+      "guidance": "Sattva's guidance is written for adults. For a child, and particularly an infant, please speak to a pharmacist, GP, or paediatric service before giving any remedy — children dehydrate and deteriorate faster than adults.",
+      "urgency": "advisory",
+      "provenance": "editorial"
+    }
+  ]
+}

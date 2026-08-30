@@ -1,102 +1,56 @@
-# Ayurvedic Remedy Suggestor
+# Sattva — Ayurvedic Remedy Guidance
 
-This is a MERN stack-based web application designed to provide Ayurvedic remedy suggestions based on user-input data like disease, gender, age, and severity. The app allows users to input their details and fetches relevant Ayurvedic medicines from the database.
+Describe how you're feeling and receive calm, **structured** Ayurvedic remedy
+guidance drawn from a **curated knowledge base** — with clear precautions and
+advice on when to seek professional care.
 
-# recommendation 
-it is my recommendation to fill the data fields in search form in search webpage in the same manner as provided in the .csv file , otherwise it  will not generate productive results.
+> **Not medical advice.** Sattva offers general information from traditional
+> Ayurvedic sources. It is not a diagnosis or treatment plan. Always consult a
+> qualified healthcare professional before starting any remedy.
 
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-
-## Features
-
-- **Homepage**: Displays information about Ayurvedic products and the brand.
-- **Search for Remedies**: Users can search for Ayurvedic medicines by inputting their disease, gender, severity, and age.
-- **Contact Form**: Users can contact the admin by filling in their personal details, which are stored in the database.
-- **Database Interaction**: The app stores user queries and fetches corresponding remedies based on the provided information from MongoDB.
-  
-## Installation
-
-1. **Clone the repository**:
-
-    ```bash
-    git clone https://github.com/your-repo/ayurvedic-remedy-suggestor.git
-    ```
-
-2. **Install dependencies**:
-
-    Navigate to the root of the project and run:
-
-    ```bash
-    npm install
-    ```
-
-3. **Start the server**:
-
-    To start the development server:
-
-    ```bash
-    npm run dev
-    ```
-
-    The application will run at remote server in cloud mongodb atlas due to ehich can acssess the application at anytime.
-
-4. **MongoDB setup**:
-
-    Ensure you have MongoDB installed and running. The app uses a local MongoDB instance running at `mongodb://localhost/demo`.
-
-## Usage
-
-1. Navigate to the homepage at to explore the Ayurvedic products.
-2. Go to the **Search** section to input details like disease, gender, severity, and age to find Ayurvedic remedies.
-3. Use the **Contact** section to send a message or query to the admin.
-4. The remedies for the search inputs will be displayed based on the database entries.
-
-## Project Structure
+## Architecture
 
 ```
-├── app.js               # Main application file
-├── package.json         # Dependency management
-├── views
-│   ├── ayurved.pug      # Homepage
-│   ├── contact.pug      # Contact form
-│   ├── details.pug      # Details form for remedy search
-│   ├── medicine.pug     # Displays Ayurvedic medicine results
-├── static
-│   ├── ayurved.css      # CSS for the homepage
-│   └── images           # Image assets
+user input
+  → normalization            (src/engine/normalize.ts)
+  → deterministic retrieval   (src/engine/retrieve.ts)   ← content/ knowledge base = source of truth
+  → deterministic safety filter (src/engine/safety.ts)
+  → structured recommendation (src/engine/assemble.ts)
+  → optional LLM phrasing      (api/, added in Phase D — never the source of facts)
 ```
 
-### Key Routes
+The recommendation engine (`src/engine/`) is a **pure TypeScript module with no
+React dependency**, unit-tested with Vitest. The LLM layer is optional and
+isolated: if it is unavailable, deterministic templated prose is always used.
 
-1. **GET `/`**: Loads the homepage (`ayurved.pug`) which provides an overview of the site and Ayurvedic offerings.
-2. **GET `/contact`**: Renders the contact form (`contact.pug`) for user input.
-3. **POST `/contact`**: Stores contact details entered by users in the MongoDB database.
-4. **GET `/details`**: Displays a form (`details.pug`) where users can enter disease, gender, severity, and age.
-5. **POST `/details`**: Fetches remedies from the database based on user input and displays them using the `medicine.pug` template.
+No database, no vector store, no embeddings — the curated dataset is small and
+does not need them.
 
-## Technologies Used
+## Stack
 
-- **Frontend**: HTML, CSS (via Pug templates)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (with Mongoose for data modeling)
-- **Templating Engine**: Pug
-- **Other Dependencies**:
-  - `body-parser`: For parsing request bodies.
-  - `nodemon`: For live reloading during development.
+React 19 · TypeScript · Vite 8 · Tailwind v4 (CSS-first tokens) · Framer Motion ·
+Vitest · oxlint. Design system and interaction patterns adapted from the
+author's portfolio; visual identity is its own (warm sage / clay / sand).
 
-## License
+## Scripts
 
-This project is licensed under the ISC License - see the `LICENSE` file for details.
+| Command | Does |
+|---|---|
+| `npm run dev` | Dev server (rebuilds the knowledge base first) |
+| `npm run build` | Typecheck + production build |
+| `npm test` | Run the engine unit tests |
+| `npm run kb:build` | Compile + validate `content/` → `src/generated/knowledge.json` |
+| `npm run kb:ingest` | Regenerate seed skeletons from `data/drug-prescription.csv` |
+| `npm run lint` | oxlint |
 
----
+## Knowledge base
 
-This content covers the basic structure, functionality, and technologies used in your project. Let me know if you'd like to add anything else!
+Curated content lives in `content/` (conditions, remedies, safety config) and
+compiles to `src/generated/knowledge.json`. **Adding conditions or remedies
+means editing content, not code.** Every record traces back to the original
+CSV entry it was derived from (`data/drug-prescription.csv`, kept as
+provenance).
 
+Fields that require authoritative sourcing/review (dosages, contraindications,
+red-flag lists) are explicitly flagged in each record until reviewed — see
+`content/README.md`.

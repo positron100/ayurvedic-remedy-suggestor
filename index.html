@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141613" media="(prefers-color-scheme: dark)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Sattva — Ayurvedic Remedy Guidance</title>
+    <meta
+      name="description"
+      content="Describe how you're feeling and receive calm, structured Ayurvedic remedy guidance drawn from a curated knowledge base — with clear precautions and advice on when to seek professional care."
+    />
+    <meta name="author" content="Mukul Negi" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sattva — Ayurvedic Remedy Guidance" />
+    <meta
+      property="og:description"
+      content="Calm, structured Ayurvedic remedy guidance from a curated knowledge base. Not a substitute for professional medical advice."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <script>
+      // Set the theme before first paint so there is no flash. Mirrors the
+      // resolution order in src/hooks/useTheme.ts.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Critical: the ground colour, before the CSS bundle resolves, so the
+         opening reveal never starts on a white flash. -->
+    <style>
+      :root { background: #f7f5f0; }
+      :root[data-theme="dark"] { background: #141613; }
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+{
+  "_note": "Symptom vocabulary for input matching. These are lay descriptions and synonyms, not clinical definitions — provenance is editorial. Adding a synonym here improves free-text matching without touching code.",
+  "symptoms": [
+    {
+      "id": "upper-abdominal-burning",
+      "label": "Burning or gnawing pain in the upper abdomen",
+      "synonyms": ["burning stomach", "burning in my stomach", "acid feeling", "stomach burning", "stomach burns", "burns after eating", "burning after eating", "burning belly", "gnawing pain", "epigastric pain", "burning below the ribs", "heartburn like pain", "burning sensation in my stomach"],
+      "category": "digestive"
+    },
+    {
+      "id": "worse-after-eating",
+      "label": "Stomach discomfort that changes with meals",
+      "synonyms": ["worse after eating", "worse after meals", "worse when hungry", "pain after food", "after eating", "after meals", "after a meal", "when i eat", "bloated after eating", "full quickly", "full after a small meal", "worse on empty stomach", "empty stomach"],
+      "category": "digestive"
+    },
+    {
+      "id": "nausea",
+      "label": "Nausea",
+      "synonyms": ["feel sick", "feeling sick", "queasy", "nauseous", "want to throw up", "sick to my stomach"],
+      "category": "digestive"
+    },
+    {
+      "id": "vomiting",
+      "label": "Vomiting",
+      "synonyms": ["throwing up", "being sick", "vomited", "puking"],
+      "category": "digestive"
+    },
+    {
+      "id": "indigestion",
+      "label": "Indigestion or bloating",
+      "synonyms": ["indigestion", "bloating", "bloated", "gassy", "belching", "burping", "trapped wind", "fullness", "heaviness after eating"],
+      "category": "digestive"
+    },
+    {
+      "id": "loss-of-appetite",
+      "label": "Reduced appetite",
+      "synonyms": ["no appetite", "not hungry", "loss of appetite", "cant eat much", "off my food"],
+      "category": "digestive"
+    },
+    {
+      "id": "loose-stools",
+      "label": "Loose or watery stools",
+      "synonyms": ["loose stools", "watery stools", "watery poo", "runny tummy", "runny stool", "diarrhea", "diarrhoea", "the runs", "loose motions", "frequent stools"],
+      "category": "digestive"
+    },
+    {
+      "id": "abdominal-cramps",
+      "label": "Abdominal cramps",
+      "synonyms": ["stomach cramps", "tummy cramps", "cramping", "gripey pain", "belly cramps", "cramps in my abdomen"],
+      "category": "digestive"
+    },
+    {
+      "id": "urgency-to-toilet",
+      "label": "Sudden urgency to use the toilet",
+      "synonyms": ["urgency", "have to rush to the toilet", "cant hold it", "sudden urge"],
+      "category": "digestive"
+    },
+    {
+      "id": "throbbing-headache",
+      "label": "Throbbing or pounding headache",
+      "synonyms": ["throbbing headache", "pounding headache", "pulsating headache", "banging headache", "headache that throbs"],
+      "category": "head"
+    },
+    {
+      "id": "one-sided-head-pain",
+      "label": "Headache mainly on one side",
+      "synonyms": ["one side of my head", "one sided headache", "left side of my head", "right side of my head", "unilateral headache", "pain behind one eye"],
+      "category": "head"
+    },
+    {
+      "id": "light-sensitivity",
+      "label": "Sensitivity to light",
+      "synonyms": ["light hurts", "sensitive to light", "bright lights bother me", "photophobia", "need to be in a dark room"],
+      "category": "neurological"
+    },
+    {
+      "id": "sound-sensitivity",
+      "label": "Sensitivity to sound",
+      "synonyms": ["noise bothers me", "sensitive to sound", "sounds are too loud", "phonophobia"],
+      "category": "neurological"
+    },
+    {
+      "id": "visual-aura",
+      "label": "Visual disturbance before a headache",
+      "synonyms": ["aura", "flashing lights", "zigzag lines", "blind spot before headache", "seeing spots before a headache"],
+      "category": "neurological"
+    },
+    {
+      "id": "headache-with-nausea",
+      "label": "Headache with nausea",
+      "synonyms": ["headache makes me feel sick", "sick with my headache", "nausea with headache"],
+      "category": "head"
+    },
+    {
+      "id": "joint-pain",
+      "label": "Joint pain",
+      "synonyms": ["aching joints", "sore joints", "painful joints", "joint aches", "pain in my joints", "arthritic pain", "knee pain", "painful knees", "my knees hurt", "aching knees", "sore knee", "elbow pain", "shoulder pain", "hip pain", "wrist pain", "finger pain", "ankle pain", "sore hands", "aching hands", "painful wrists"],
+      "category": "musculoskeletal"
+    },
+    {
+      "id": "joint-stiffness",
+      "label": "Joint stiffness, worse in the morning",
+      "synonyms": ["stiff joints", "morning stiffness", "stiff in the morning", "stiffness that eases with movement", "stiff knees in the morning", "stiff knees", "stiff hands", "stiff fingers", "stiffness eases as i move", "eases as i move", "loosen up as i move"],
+      "category": "musculoskeletal"
+    },
+    {
+      "id": "joint-swelling",
+      "label": "Swelling around a joint",
+      "synonyms": ["swollen joint", "swelling in my joint", "puffy joint", "swollen knee", "swollen fingers"],
+      "category": "musculoskeletal"
+    },
+    {
+      "id": "reduced-joint-movement",
+      "label": "Reduced range of movement in a joint",
+      "synonyms": ["cant bend my knee", "cant move my joint properly", "limited movement", "joint wont move fully", "restricted movement"],
+      "category": "musculoskeletal"
+    },
+    {
+      "id": "dehydration-thirst",
+      "label": "Marked thirst or dry mouth",
+      "synonyms": ["very thirsty", "dry mouth", "cant drink enough", "parched", "dehydrated"],
+      "category": "systemic"
+    },
+    {
+      "id": "fatigue",
+      "label": "Tiredness or low energy",
+      "synonyms": ["tired", "fatigued", "no energy", "worn out", "exhausted", "run down"],
+      "category": "systemic"
+    },
+    {
+      "id": "regurgitation",
+      "label": "Acid or food coming back up",
+      "synonyms": ["acid reflux", "food comes back up", "sour taste in my mouth", "regurgitation", "acid in my throat"],
+      "category": "digestive"
+    }
+  ]
+}

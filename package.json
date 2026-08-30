@@ -1,24 +1,40 @@
 {
-  "name": "shoe_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "ayurvedic-remedy-suggestor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "predev": "node scripts/build-knowledge.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/build-knowledge.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "oxlint",
+    "pretest": "node scripts/build-knowledge.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "kb:build": "node scripts/build-knowledge.mjs",
+    "kb:ingest": "node scripts/ingest-csv.mjs"
   },
-  "keywords": [
-    "awesome"
-  ],
-  "author": "Mukul",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.4.5",
-    "express": "^4.18.2",
-    "mongodb": "^6.1.0",
-    "mongoose": "^7.5.3",
-    "nodemon": "^3.0.1",
-    "pug": "^3.0.2"
+    "framer-motion": "^13.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.6",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "jsdom": "^25.0.1",
+    "oxlint": "^1.75.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^3.2.4"
   }
 }

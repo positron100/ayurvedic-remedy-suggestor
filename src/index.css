@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Colour is defined once here as CSS custom properties, fed into Tailwind via
+   `@theme inline`. Change the palette here, never in components.
+
+   Identity: warm, calm, "wellness" — a paper-sand ground, a eucalyptus/sage
+   accent, clay as a quiet secondary. Deliberately NOT the portfolio's
+   indigo/terminal palette; only the token *structure* is shared.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --bg: #f7f5f0;
+  --bg-elevated: #fffdf9;
+  --bg-subtle: #efece3;
+  --fg: #2b2a26;
+  --fg-muted: #6b6860;
+  --fg-faint: #a8a396;
+  --border: #e6e1d5;
+  --border-strong: #d6cfbe;
+
+  /* Eucalyptus / sage — the primary accent. */
+  --accent: #56796a;
+  --accent-strong: #3f5f51;
+  --accent-fg: #f8f7f2;
+  --accent-soft: #e5ede7;
+
+  /* Clay — a warm secondary, used sparingly (severity, subtle highlights). */
+  --clay: #b0805f;
+  --clay-strong: #92664a;
+  --clay-soft: #f1e6db;
+
+  /* Semantic — caution / stop, tuned warm so they sit in the palette. */
+  --caution: #b5843a;
+  --caution-soft: #f3e8d3;
+  --danger: #b1493c;
+  --danger-soft: #f4e0dc;
+
+  --shadow-color: 40 20% 40%;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+}
+
+:root[data-theme="dark"] {
+  --bg: #141613;
+  --bg-elevated: #1c201b;
+  --bg-subtle: #23271f;
+  --fg: #eae8dd;
+  --fg-muted: #a6a89b;
+  --fg-faint: #6c6e60;
+  --border: #2d322a;
+  --border-strong: #3d4338;
+
+  --accent: #8fb89b;
+  --accent-strong: #a9ccb3;
+  --accent-fg: #101410;
+  --accent-soft: #1e2a21;
+
+  --clay: #cd9c79;
+  --clay-strong: #dcb193;
+  --clay-soft: #2a2119;
+
+  --caution: #d8ab5f;
+  --caution-soft: #2b2413;
+  --danger: #d98577;
+  --danger-soft: #2c1c19;
+
+  --shadow-color: 150 30% 3%;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+
+  --color-clay: var(--clay);
+  --color-clay-strong: var(--clay-strong);
+  --color-clay-soft: var(--clay-soft);
+
+  --color-caution: var(--caution);
+  --color-caution-soft: var(--caution-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slow, calm breathing for the hero orb — motion with a reason (ambient
+     "alive" cue), disabled under reduced motion by the global block below. */
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.06);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: -180% 0;
+    }
+    to {
+      background-position: 180% 0;
+    }
+  }
+}
+
+/* Default every border to the theme token — from `base`, so explicit
+   `border-*` utilities still win (see the portfolio's note on layer order). */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  /* Reserve the classic scrollbar's width up front. Without this, the vertical
+     scrollbar appearing once content grows past the viewport narrows the layout
+     by ~15px and reflows the whole page — a large layout shift on desktop once
+     the bundle is fast enough to paint before the page is full height. No visual
+     effect where scrollbars are overlaid (mobile). */
+  scrollbar-gutter: stable;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Text-entry fields carry their own focus treatment (accent border + soft
+   wash), so they opt out of the global ring. `:where()` keeps specificity at
+   zero so the utility-level treatment still applies. */
+:where(input, textarea, select):focus-visible {
+  outline: none;
+}
+
+/* Smooth, cheap theme cross-fade — colour only, never layout or transform. */
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    fill 0.3s ease,
+    stroke 0.3s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   Leaf theme reveal (see src/utils/themeReveal.ts).
+
+   While a reveal is in flight the real DOM must snap to the destination
+   colours instantly — otherwise the global colour transition above is still
+   mid-fade when the browser captures the View Transition snapshot, and the
+   half-blended frame is frozen into the reveal.
+   --------------------------------------------------------------------------- */
+html[data-theme-transition] *,
+html[data-theme-transition] *::before,
+html[data-theme-transition] *::after {
+  transition: none !important;
+}
+
+/* The browser's default cross-fade is disabled so the only motion is the leaf
+   clip driven from JS. Pointer-events off on the whole overlay so a snapshot
+   that lingers a frame past its animation can never intercept a click. */
+::view-transition,
+::view-transition-group(root),
+::view-transition-image-pair(root) {
+  pointer-events: none;
+}
+::view-transition-group(root) {
+  animation: none;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  pointer-events: none;
+}
+
+/* Entering dark: the incoming dark layer sits on top and its leaf grows. */
+html[data-theme-transition="to-dark"]::view-transition-old(root) {
+  z-index: 1;
+}
+html[data-theme-transition="to-dark"]::view-transition-new(root) {
+  z-index: 2;
+  clip-path: var(--leaf-clip, path("M 0 0 Z"));
+}
+
+/* Entering light: the outgoing dark layer sits on top and its leaf retracts,
+   so it reads as darkness withdrawing into the toggle. */
+html[data-theme-transition="to-light"]::view-transition-new(root) {
+  z-index: 1;
+}
+html[data-theme-transition="to-light"]::view-transition-old(root) {
+  z-index: 2;
+  clip-path: var(--leaf-clip, path("M 0 0 Z"));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Horizontal page padding that respects notches. */
+.container-px {
+  padding-left: max(1.35rem, env(safe-area-inset-left));
+  padding-right: max(1.35rem, env(safe-area-inset-right));
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+/* Skeleton shimmer surface. */
+.skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--bg-subtle) 0%,
+    color-mix(in oklab, var(--bg-subtle) 55%, var(--bg-elevated)) 50%,
+    var(--bg-subtle) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}

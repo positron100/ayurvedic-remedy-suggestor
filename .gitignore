@@ -1,23 +1,22 @@
-# Node modules folder
+# Dependencies
 node_modules
 
-# Environment variables
+# Build output
+dist
+src/generated
+
+# Env — never commit real values
 .env
 .env.local
 .env.*.local
 
 # Logs
-logs
 *.log
 npm-debug.log*
 
-# Operating system-specific files
+# Editor / OS
 .DS_Store
 Thumbs.db
-
-# Miscellaneous
 .idea
 .vscode
-
-Drug prescription Dataset.csv
-demo.datas.json
+.playwright-mcp
