@@ -34,7 +34,9 @@
       // resolution order in src/hooks/useTheme.ts.
       (function () {
         try {
-          var stored = localStorage.getItem("theme");
+          // Portfolio embed/link contract: ?cp-mode=light|dark wins over storage.
+          var cp = new URLSearchParams(location.search).get("cp-mode");
+          var stored = cp === "light" || cp === "dark" ? cp : localStorage.getItem("theme");
           var theme =
             stored === "light" || stored === "dark"
               ? stored
@@ -53,6 +55,45 @@
       :root[data-theme="dark"] { background: #141613; }
       body { margin: 0; }
     </style>
+    <script>
+      // Portfolio preview contract. Only when framed AND opened with ?cp-mode:
+      // hide this document's own scrollbar (scrolling itself is untouched) and
+      // tell the parent whether there is more to scroll, so it can draw a small
+      // arrow instead. Carries two booleans, nothing else.
+      (function () {
+        try {
+          if (window.top === window || !/[?&]cp-mode=/.test(location.search)) return;
+          var css = document.createElement("style");
+          css.textContent = "html{scrollbar-width:none}html::-webkit-scrollbar{display:none}";
+          document.head.appendChild(css);
+          var last = "";
+          function report() {
+            var e = document.scrollingElement || document.documentElement;
+            var down = e.scrollHeight - e.clientHeight > 2 && e.scrollTop + e.clientHeight < e.scrollHeight - 2;
+            var right = e.scrollWidth - e.clientWidth > 2 && e.scrollLeft + e.clientWidth < e.scrollWidth - 2;
+            var key = down + "," + right;
+            if (key === last) return;
+            last = key;
+            parent.postMessage({ type: "cp-scroll", down: down, right: right }, "*");
+          }
+          addEventListener("scroll", report, { passive: true });
+          addEventListener("resize", report);
+          addEventListener("load", report);
+          // Content height changes without any scroll/resize event, so also
+          // re-check (debounced) when the DOM or the body's size changes.
+          var timer;
+          function later() {
+            clearTimeout(timer);
+            timer = setTimeout(report, 120);
+          }
+          document.addEventListener("DOMContentLoaded", function () {
+            if (window.ResizeObserver) new ResizeObserver(later).observe(document.body);
+            new MutationObserver(later).observe(document.documentElement, { childList: true, subtree: true });
+            report();
+          });
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
